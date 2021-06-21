@@ -7,14 +7,18 @@ export const CARD_LAID_CLASSNAME = "card-laid";
 
 export type CardProps = PropsWithChildren<{
     elevated: boolean;
+    className?: string
 } & typeof defaultProps>;
 
 const defaultProps = {
     elevated: true
 };
 
-export const Card = (props: CardProps) =>
-    <div className={[CARD_CLASSNAME, (props.elevated ? CARD_ELEVATED_CLASSNAME : CARD_LAID_CLASSNAME)].join(" ")}>
+export const Card = (props: CardProps) => {
+    let classNames = [CARD_CLASSNAME, (props.elevated ? CARD_ELEVATED_CLASSNAME : CARD_LAID_CLASSNAME)];
+    if (props.className !== undefined) classNames.push(props.className);
+    return <div className={classNames.join(" ")}>
         {props.children}
     </div>;
+}
 Card.defaultProps = defaultProps;
