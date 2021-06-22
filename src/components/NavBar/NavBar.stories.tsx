@@ -11,8 +11,9 @@ const Template: Story<NavBarProps> = (args) => <NavBar {...args}></NavBar>
 export const Nav = Template.bind({});
 Nav.args = {
     links: [
-        { text: "Home", href: "#", active: true },
+        { text: "Home", href: "#" },
         { text: "Two", href: "#" },
         { text: "Three", href: "#" }
-    ]
+    ],
+    active: 0
 };
