@@ -10,9 +10,8 @@
     overflow: hidden;
     background-color: dimgray;
     color: white;
-}
-
-.card-title > * {
-    margin-block-start: 0 !important;
-    margin-block-end: 0 !important;
+    * {
+        margin-block-start: 0 !important;
+        margin-block-end: 0 !important;
+    }
 }

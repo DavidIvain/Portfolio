@@ -7,15 +7,15 @@
     font-size: 2em;
     transition: background-color 0.2s linear 0s;
     cursor: pointer;
-}
-.navbar-link:hover {
-    //box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    background-color: aliceblue;
-}
-.navbar-link:not(:last-child) {
-    margin-right: 16px;
-}
-.navbar-link.active {
-    background-color: cornflowerblue;
-    color: white !important;
+    &:hover {
+        //box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+        background-color: aliceblue;
+    }
+    &:not(:last-child) {
+        margin-right: 16px;
+    }
+    &.active {
+        background-color: cornflowerblue;
+        color: white !important;
+    }
 }
