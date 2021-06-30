@@ -2,12 +2,13 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    transition-property: "filter";
+    transition-duration: 1s;
 }
 
 .card-title {
     padding: 16px;
     border-radius: 16px;
-    overflow: hidden;
     background-color: dimgray;
     color: white;
     * {
