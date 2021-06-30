@@ -12,7 +12,7 @@ export type HeaderProps = {
 };
 
 export const Header = (props: HeaderProps) => {
-    function changeLocale() { }
+    //function changeLocale() { }
     return <header id="header">
         <div>
             <Avatar src={props.avatarLink} alt="My Photo" size={160} />

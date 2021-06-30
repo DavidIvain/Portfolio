@@ -61,7 +61,7 @@ const translationData = {
 
 const ContactInfo = (props: PropsWithChildren<{ src: string, alt: string, isLink: boolean, href?: string }>) => <div>
     <img src={props.src} alt={props.alt} />
-    {props.isLink ? <a target="_blank" href={props.href}>{props.children}</a> : <span>{props.children}</span>}
+    {props.isLink ? <a target="_blank" rel="noreferrer" href={props.href}>{props.children}</a> : <span>{props.children}</span>}
 </div>
 
 const SectionTitle = (props: PropsWithChildren<{ title: string, href: string, backgroundColor?: string, background?: string }>) => <CardTitle backgroundColor={props.backgroundColor} background={props.background}>
