@@ -17,7 +17,7 @@ export const Header = (props: HeaderProps) => {
         <div>
             <Avatar src={props.avatarLink} alt="My Photo" size={160} />
             <Card>
-                <h1>David IVAIN</h1>
+                <h1 className="header-title">David IVAIN</h1>
             </Card>
         </div>
         <NavBar links={props.links} active={props.active} />

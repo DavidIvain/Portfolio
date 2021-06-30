@@ -66,7 +66,7 @@ const ContactInfo = (props: PropsWithChildren<{ src: string, alt: string, isLink
 
 const SectionTitle = (props: PropsWithChildren<{ title: string, href: string, backgroundColor?: string, background?: string }>) => <CardTitle backgroundColor={props.backgroundColor} background={props.background}>
     <svg width="30" height="30" style={{ lineHeight: "100%" }}><title>{props.title}</title><use href={props.href} height="30" width="30"></use></svg>
-    <h2 className="section-title" style={{ marginInlineStart: "16px" }}>{props.children}</h2>
+    <h3 className="section-title" style={{ marginInlineStart: "16px" }}>{props.children}</h3>
 </CardTitle>
 
 const SectionContent = (props: PropsWithChildren<{ className?: string }>) => <div className={props.className !== undefined ? "section-content " + props.className : "section-content"}>
@@ -76,7 +76,7 @@ const SectionContent = (props: PropsWithChildren<{ className?: string }>) => <di
 const SkillCategory = (props: PropsWithChildren<{ title: string, backgroundColor: string, href: string, alt: string }>) => <article className="skill-category">
     <CardTitle justifyContent="center" backgroundColor={props.backgroundColor}>
         <svg width="24" height="24"><title>{props.alt}</title><use href={props.href}></use></svg>
-        <h3 className="skill-category-title">{props.title}</h3>
+        <h4 className="skill-category-title">{props.title}</h4>
     </CardTitle>
     <div className="skill-category-content"><ul>{props.children}</ul></div>
 </article>
@@ -92,7 +92,7 @@ export const HomeContent = (props: HomeContentProps) => {
         <div id="links-card">
             <Card>
                 <CardTitle backgroundColor="#80a9f1" flex={false}>
-                    <h1>David Ivain</h1>
+                    <h2>CV - David Ivain</h2>
                     <span className="subsection-title">{translationData.description[props.locale]}</span>
                 </CardTitle>
                 <address id="links">
@@ -112,11 +112,11 @@ export const HomeContent = (props: HomeContentProps) => {
                         <SectionTitle backgroundColor="#e15259" title="User icon" href="/assets/user.svg#user">{translationData.aboutTitle[props.locale]}</SectionTitle>
                         <SectionContent className="justify">
                             <section>
-                                <h3 className="subsection-title">Introduction</h3>
+                                <h4 className="subsection-title">Introduction</h4>
                                 {translationData.introductionContent[props.locale]}
                             </section>
                             <section>
-                                <h3 className="subsection-title">{translationData.coInterestTitle[props.locale]}</h3>
+                                <h4 className="subsection-title">{translationData.coInterestTitle[props.locale]}</h4>
                                 <ul>
                                     <li>{translationData.guitar[props.locale]}</li>
                                     <li>Animes</li>
@@ -164,17 +164,17 @@ export const HomeContent = (props: HomeContentProps) => {
                         <SectionTitle backgroundColor="#60b58d" title="Book Icon" href="/assets/book.svg#book">{translationData.education[props.locale]}</SectionTitle>
                         <SectionContent>
                             <article>
-                                <h3 className="subsection-title mbe-0">{translationData.master[props.locale]}: IAGL (Infrastructures Applicatives et Génie Logiciel)</h3>
+                                <h4 className="subsection-title mbe-0">{translationData.master[props.locale]}: IAGL (Infrastructures Applicatives et Génie Logiciel)</h4>
                                 <p className="education-school">{translationData.universityOL[props.locale]}, Villeneuve-d'Ascq</p>
                                 <p className="mbs-0"><time dateTime="2019">2019</time> - <time dateTime="2021">{translationData.today[props.locale]}</time></p>
                             </article>
                             <article>
-                                <h3 className="subsection-title mbe-0">{translationData.licence[props.locale]}</h3>
+                                <h4 className="subsection-title mbe-0">{translationData.licence[props.locale]}</h4>
                                 <p className="education-school">{translationData.universityOL[props.locale]}, Villeneuve-d'Ascq</p>
                                 <p className="mbs-0"><time dateTime="2018">2018</time> - <time dateTime="2019">2019</time></p>
                             </article>
                             <article>
-                                <h3 className="subsection-title mbe-0">{translationData.bts[props.locale]}</h3>
+                                <h4 className="subsection-title mbe-0">{translationData.bts[props.locale]}</h4>
                                 <p className="education-school">Lycée privé Saint Rémi, Roubaix</p>
                                 <p className="mbs-0"><time dateTime="2016">2016</time> - <time dateTime="2018">2018</time></p>
                             </article>
@@ -184,21 +184,21 @@ export const HomeContent = (props: HomeContentProps) => {
                         <SectionTitle backgroundColor="#c39780" title="Briefcase Icon" href="/assets/briefcase.svg#briefcase">{translationData.experiences[props.locale]}</SectionTitle>
                         <SectionContent>
                             <article>
-                                <h3 className="subsection-title">{translationData.intern[props.locale]}, Urbilog ; Villeneuve-d'Ascq</h3>
+                                <h4 className="subsection-title">{translationData.intern[props.locale]}, Urbilog ; Villeneuve-d'Ascq</h4>
                                 <section>
-                                    <h4 className="mbe-0"><time dateTime="P12W">12 {translationData.weeks[props.locale]}</time>, <time dateTime="2019">2019</time></h4>
+                                    <h5 className="mbe-0"><time dateTime="P12W">12 {translationData.weeks[props.locale]}</time>, <time dateTime="2019">2019</time></h5>
                                     <p className="mbs-0">{translationData.expAngular[props.locale]}</p>
                                 </section>
                                 <section>
-                                    <h4 className="mbe-0"><time dateTime="P8W">8 {translationData.weeks[props.locale]}</time>, <time dateTime="2018">2018</time></h4>
+                                    <h5 className="mbe-0"><time dateTime="P8W">8 {translationData.weeks[props.locale]}</time>, <time dateTime="2018">2018</time></h5>
                                     <p className="mbs-0">{translationData.expIntra2[props.locale]}</p>
                                 </section>
                                 <section>
-                                    <h4 className="mbe-0"><time dateTime="P5W">5 {translationData.weeks[props.locale]}</time>, <time dateTime="2018">2017</time></h4>
+                                    <h5 className="mbe-0"><time dateTime="P5W">5 {translationData.weeks[props.locale]}</time>, <time dateTime="2018">2017</time></h5>
                                     <p className="mbs-0">{translationData.expIntra1[props.locale]}</p>
                                 </section>
                                 <section>
-                                    <h4>{translationData.plusUrbilogTitle[props.locale]}</h4>
+                                    <h5>{translationData.plusUrbilogTitle[props.locale]}</h5>
                                     {translationData.plusUrbilogContent[props.locale]}
                                 </section>
                             </article>
