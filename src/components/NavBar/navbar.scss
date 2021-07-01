@@ -3,11 +3,22 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    &.blur {
+        backdrop-filter: blur(8px);
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        background-color: rgba($color: #fff, $alpha: 0.7);
+        nav {
+            a:not(.active):not(:hover) {
+                background-color: rgba($color: #fff, $alpha: 0.5);
+            }
+        }
+    }
     nav {
         display: grid;
         //flex-direction: row;
         //justify-content: flex-end;
         grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
         @media screen and (max-width: 1100px) {
             flex-grow: 1;
         }
@@ -15,11 +26,14 @@
 
     @media screen and (max-width: 1100px) {
         position: fixed;
-        bottom: 8px;
-        width: calc(100% - 96px);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 0;
+        //width: calc(100% - 96px);
     }
     @media screen and (max-width: 800px) {
-        width: calc(100% - 48px);
+        //width: calc(100% - 48px);
         .navbar-link {
             font-size: 1.17em;
             font-weight: bold;
