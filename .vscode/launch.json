@@ -29,7 +29,10 @@
             ],
             "cwd": "${workspaceRoot}",
             "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
+            "internalConsoleOptions": "neverOpen",
+            "env": {
+                "BROWSER": "Firefox"
+            }
         },
         {
             "type": "pwa-node",
@@ -56,7 +59,10 @@
             ],
             "cwd": "${workspaceRoot}",
             "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
+            "internalConsoleOptions": "neverOpen",
+            "env": {
+                "BROWSER": "Firefox"
+            }
         },
     ]
 }
