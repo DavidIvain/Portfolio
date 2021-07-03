@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+    <path fill="#785027" fill-opacity="1" d="M0.00,70 L100,70 C100,100 70,100 60,100 L40,100 C30,100 0,100 0,70Z"></path>
+    <line x1="50" x2="50" y1="0" y2="70" stroke-width="5" stroke-linecap="butt" stroke="#654321"></line>
+    <path stroke-width="1" stroke-linecap="butt" stroke="#654321" fill="#ffffff" fill-opacity="1" d="M 48,5 L10,65 L48,65Z" />
+    <path stroke-width="1" stroke-linecap="butt" stroke="#654321" fill="#ffffff" fill-opacity="1" d="M 52,15 L70,65 L52,65Z" />
+</svg>
