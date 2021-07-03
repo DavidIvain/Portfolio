@@ -1,0 +1,134 @@
+@mixin colorize($preset) {
+    background-color: #{nth($preset, 1)};
+    color: #{nth($preset, 2)};
+}
+
+$primary: (
+    dark: (
+        #003e68,
+        white,
+    ),
+    main: (
+        #3d6896,
+        white,
+    ),
+    light: (
+        #6e96c7,
+        white,
+    ),
+);
+$secondary: (
+    dark: (
+        //"#212121",
+        #00505c,
+        white,
+    ),
+    main: (
+        #2c7d89,
+        white,
+    ),
+    light: (
+        #60acb9,
+        white,
+    ),
+);
+
+@function color($palette, $accent) {
+    @return map-get($palette, $accent);
+}
+
+#home-background {
+    z-index: -1000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #212121;
+    > * {
+        filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.5));
+        position: absolute;
+    }
+    #cloud-1 {
+        z-index: 4;
+        top: 0px;
+        left: 0px;
+        > div {
+            @include colorize(color($primary, light));
+            width: 55vmin;
+            height: 40vmin;
+            clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+        }
+    }
+    #cloud-2 {
+        z-index: 4;
+        top: 0px;
+        right: 0px;
+        > div {
+            @include colorize(color($primary, light));
+            width: 35vmin;
+            height: 20vmin;
+            clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+        }
+    }
+    #cloud-3 {
+        z-index: 2;
+        top: 0;
+        right: 0;
+        > div {
+            @include colorize(color($primary, main));
+            height: 40vmin;
+            width: 120vmin;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+        }
+    }
+    #cloud-4 {
+        z-index: 1;
+        top: 0px;
+        left: 0px;
+        > div {
+            @include colorize(color($primary, dark));
+            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
+            height: 50vmin;
+            width: 100vw;
+        }
+    }
+    #moon {
+        z-index: 3;
+        top: 5vh;
+        right: 5vw;
+        > div {
+            border-radius: 50%;
+            background: #fff8ad;
+            height: 40vmin;
+            width: 40vmin;
+        }
+    }
+    .wave {
+        width: 100vw;
+        height: 20vh;
+        bottom: 0px;
+        left: 0px;
+        display: block;
+        //animation: 2s ease-in-out 1s infinite alternate waves;
+    }
+    #boat {
+        margin-bottom: 15vh;
+        bottom: 0px;
+        right: 3vw;
+        width: 20vmin;
+        //animation: 2s ease-in-out 1s infinite alternate waves;
+    }
+    .wave,
+    #boat {
+        z-index: 1;
+    }
+}
+/*@keyframes waves {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 5vh, 0);
+    }
+}*/

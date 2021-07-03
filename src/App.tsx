@@ -1,5 +1,6 @@
 import './App.css';
 import { Header } from './components/Header/Header';
+import { HomeBackground } from './components/HomeBackground/HomeBackground';
 import { HomeContent } from './components/HomeContent/HomeContent';
 
 const translationData = {
@@ -21,6 +22,7 @@ function App() {
         ]}
         active={0}
       />
+      <HomeBackground></HomeBackground>
       <HomeContent locale={locale} />
     </>
   );
