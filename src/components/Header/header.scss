@@ -11,6 +11,8 @@ $avatar-size: 160;
     top: 0;
     @media screen and (max-width: #{$tab-width}px) {
         padding: 8px;
+    }
+    @media screen and (max-width: #{$desktop-width}px) {
         position: relative;
     }
     .avatar {
@@ -36,10 +38,10 @@ $avatar-size: 160;
         .card {
             border-radius: 1000px;
             padding: 24px;
-            @media screen and (max-width: #{$phone-width}px) {
+            @media screen and (max-width: #{$tab-width}px) {
                 padding: 16px;
             }
-            @media screen and (min-width: #{$tab-width + 1}px) {
+            @media screen and (min-width: #{$desktop-width + 1}px) {
                 margin-left: 32px;
             }
         }

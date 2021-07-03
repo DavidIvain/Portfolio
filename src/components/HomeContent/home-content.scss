@@ -1,7 +1,7 @@
 @import "../../vars";
 @mixin padded {
     padding: 16px;
-    @media screen and (max-width: #{$phone-width}px) {
+    @media screen and (max-width: #{$tab-width}px) {
         padding: 8px;
     }
 }
